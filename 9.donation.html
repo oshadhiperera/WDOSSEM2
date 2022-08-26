@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <meta name="description" content="purchase and donate">
+        <title>Donations</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="p&d.css">
+
+
+    </head>
+    <body>
+        <div class="container-9">
+            <div class="content-9">
+                <div class="navbar">
+                    <div class="logo"><h1>CompassLk</h1></div>
+                    <div class="links">
+                        <a href="index.html"><img src="Images/home.png" width="25px" height="25px"></a>
+                        <a href="2.home.html">Home</a>
+                        <a href="3.wildlife.html">Wild Life</a>
+                        <a href="4.beaches.html">Beaches</a>
+                        <a href="5.activities.html">Activities</a>
+                        <a href="6.heritage_loc1.html">Heritage</a>
+                    </div>
+                    <div class="btn"><a href="8.p&d.html"><button>Purchase and Donate</button></a></div>
+                </div>
+                <div class="main-content-1 main-content-9"></div>
+
+                <div class="form">
+                    <fieldset>
+
+                    <h2>Donations</h2>
+
+                    <div class="form-elements">
+                    <label for="donate">Donate to:</label>
+        
+                    <select name="donate" id="cards">
+                        <option>Wild Life</option>
+                        <option>Poorly</option>
+                        <option>Children in need</option>
+                    </select>
+                    </div>
+        
+                    <div class="form-elements">
+                    <label for="fname">First Name:</label>
+                    <input type="text" name="fname" placeholder="First Name" required>
+                    </div>
+                    <div class="form-elements">
+                    <label for="lname">Last Name:</label>
+                    <input type="text" name="lname" placeholder="Last Name" required>
+                    </div>
+                    <div class="form-elements">
+                    <label for="acc.no">Credit Card No:</label>
+                    <input type="text" name="card.no" maxlength="16" placeholder="Credit Card No" required>
+                    </div>
+                    <div class="form-elements">
+                    <label for="cvv">CVV:</label>
+                    <input type="text" name="cvv" maxlength="3" placeholder="CVV" required>
+                    </div>
+                    <div class="form-elements">
+                    <label for="ex.date">Expiry Date:</label>
+                    <input type="text" name="ex.date" maxlength="5" placeholder="Expiry Date" required>
+                    </div>
+                    <div class="form-elements">
+                    <label for="amount">Choose your amount:</label><br>
+        
+                    <input type="radio" id="100" name="amount" value="100">
+                    <label for="100">100LKR</label>
+                    
+                    <input type="radio" id="250" name="amount" value="250">
+                    <label for="250">250LKR</label>
+        
+                    <input type="radio" id="500" name="amount" value="500">
+                    <label for="500">500LKR</label>
+                    
+                    <input type="radio" id="1000" name="amount" value="1000">
+                    <label for="1000">1000LKR</label>
+                    
+                    <input type="radio" id="2500" name="amount" value="2500">
+                    <label for="2500">2500LKR</label>
+                  
+                    <input type="radio" id="5000" name="amount" value="5000">
+                    <label for="5000">5000LKR</label>
+                    
+                    <input type="radio" id="10000" name="amount" value="10000">
+                    <label for="10000">10000LKR</label>
+                    </div>
+                    <div class="form-elements">
+                    <button class="bttn" type="reset" value="Clear Form">Reset</button>
+                    <a href="8.p&d.html"><button class="bttn">Back</button></a>
+                   
+                    <div class="cont">
+                        <button type="submit" class="bttn" onclick="openPopup()">Submit</button>
+                        <div class="pop" id="pop">
+                            <img src="Images/checked.png">
+                            <h2>Thank You For Your Donation!</h2>
+                            <button type="button" onclick="closePopup()">OK</button>
+                        </div>
+                    </div>
+                </fieldset>
+
+       
+            </div>
+            <div class="icons">
+                <i><img src="Images/twitter.png" width="25px"></i>
+                <i><img src="Images/whatsapp.png" width="25px"></i>
+                <i><img src="Images/instagram.png" width="25px"></i>
+                <i><img src="Images/facebook.png" width="25px"></i>
+            </div>
+        
+        </div>
+        </div>
+
+        
+        </div> 
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

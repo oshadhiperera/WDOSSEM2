@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width,initial-scale=1">
+        <meta name="description" content="Home page">
+        <title>Book your tickets</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="tickets.css">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+
+<style>
+    .container{
+    width: 100%;
+    height: 100vh;
+    background-image:url(Images/activities.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+.content{
+    width: 80%;
+    height: 95vh;
+    background-image: url(Images/activities.jpg);
+    background-size: cover;
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 0 0 10px black;
+}
+
+.main-content h4{
+    margin-left: 76px;
+    font-size: 30px;
+    margin-top: 62px;
+    color: black;
+    text-shadow: 1px 1px 2px black;
+}
+
+fieldset {
+    background-color: #e3a532a2;
+    opacity: 100%;
+  }
+
+th{
+    text-align:left;
+}
+
+.button {
+    background-color: #e3a532a2; 
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+
+.page{
+    text-align: center;
+    border-style: solid;
+    width:100%
+}
+
+#alignment{
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+.cont {
+ 
+    margin-left: 10px;
+    margin-right: auto;
+ 
+ }
+ 
+ body{
+     margin-left: auto;
+     margin-right: auto;
+ }
+ 
+ .selection {
+   padding-top: 50px;
+   padding-bottom: 50px;
+   display: none;
+ }
+ 
+ .purchase {
+   display: none;
+ }
+ 
+ .form-item {
+   min-width: 200px;
+   padding: 10px 10px 10px 10px;
+ }
+ 
+ .ticket-cost-box {
+   display: flex;
+   flex-direction: row;
+ }
+ 
+ .cost {
+   padding: 10px;
+ }
+ 
+ .card {
+   margin: 20px;
+   padding: 20px;
+   width: 200px;
+   min-height: 100px;
+   display: grid;
+   border-radius: 10px;
+   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+   transition: all 0.2s;
+    background:  #d8d2c6a2;
+ }
+ .selection {
+     position: relative;
+     width: 350px;
+     height: 500px;
+     border-radius: 20px;
+     padding: 40px;
+     box-sizing: border-box;
+     background: #d8d2c6a2;
+     /*box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;*/
+   }
+ 
+ .card:hover {
+     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+     transform: scale(1.01);
+     background:  #d8d2c6a2;
+   }
+ 
+   select {
+     background:  #d8d2c6a2;
+     padding: 10px;
+     padding-left: 10px;
+     min-height: 45px;
+     font-size: 14px;
+     border-radius: 3px;
+     min-width: 200px;
+     
+   }
+ 
+ 
+ .card-container{
+   position: relative;
+ }
+ .card-remove{
+   position:absolute;
+   right: 0px;
+   top: 0px;
+ }
+ 
+ 
+ 
+   .overall-cost{
+     position: relative;
+     margin-top: 10px;
+     margin-bottom: 10px;
+   }
+ 
+   .total-ticket-amount{
+     position:absolute;
+     right: 0px;
+     bottom: 3px;
+   }
+ 
+   
+ /* Modal CSS */
+ 
+ /* The Modal (background) */
+ .modal {
+   display: none;
+   position: fixed; 
+   z-index: 1; 
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%; 
+   overflow: auto; 
+   background-color: rgb(0,0,0); 
+   background-color: rgba(0,0,0,0.4); 
+ }
+ 
+ /* Modal Content/Box */
+ .modal-content {
+   background-color: #fefefe;
+   margin: 15% auto;
+   padding: 20px;
+   border: 1px solid #888;
+   width: 80%; 
+   color: black;
+ }
+ 
+ /* The Close Button */
+ .close {
+   color: #aaa;
+   float: right;
+   font-size: 28px;
+   font-weight: bold;
+ }
+ 
+ .close:hover,
+ .close:focus {
+   color: black;
+   text-decoration: none;
+   cursor: pointer;
+ }
+ 
+</style>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="content">
+                <div class="navbar">
+                    <div class="logo"><h1>CompassLk</h1></div>
+                    <div class="links">
+                      <a href="index.html"><img src="Images/home.png" width="25px" height="25px"></a>
+                      <a href="2.home.html">Home</a>
+                      <a href="3.wildlife.html">Wild Life</a>
+                      <a href="4.beaches.html">Beaches</a>
+                      <a href="5.activities.html">Activities</a>
+                      <a href="6.heritage_loc1.html">Heritage</a>
+                    </div>
+                    <div class="btn"><a href="8.p&d.html"><button>Purchase and Donate</button></a></div>
+                </div>
+         
+        <fieldset>
+
+            <div class="cont.">
+                <div class="info">
+                  <div  class="form-i">
+                    <div class="intro">
+                      <h2>Ticket booking</h2>
+                    </div>
+                    <div class="info">
+                        <p>For children under age 3, entrance is <strong>free</strong>.</p>
+                    </div>
+                    <div class="btn-form-selection">
+                      <button class="btn btn-add">Add tickets</button>
+                    </div>
+            
+                    
+                    <div class="selection">
+                      <div class="add-ticket">
+                        <!-- Ticket Form/price will be display here -->
+                        <form  onsubmit="submit" class="form-ticket">
+                          <div class="form-item">
+                            <div class="form-label ticket-type">Ticket Type</div>
+                            <div class="form-input">
+                              <select class="form-type">
+                                <option value="FAP">Foreign Adult Pass</option>
+                                <option value="FCP">Foreign Child Pass</option>
+                                <option value="LAP">Local Adult Pass</option>
+                                <option value="LCP">Local Child Pass</option>
+                                <option value="APF">Annual Pass-Foreign</option>
+                                <option value="APL">Annual Pass-Local</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-item">
+                            <div class="form-label duration">Duration</div>
+                            <div class="form-input">
+                              <select class="ticket-duration">
+                                <option value="3hrs">03 hrs</option>
+                                <option value="12hrs">12 hrs</option>
+                                <option value="24hrs">24 hrs</option>
+                                <option value="48">48 hrs</option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="form-item">
+                            <div class="form-label food-token">Food token</div>
+                            <div class="form-input-radio">
+                              <input
+                                type="radio"
+                                id="needed"
+                                name="food_token"
+                                value=1
+                              />
+                              <label for="true">Needed</label><br />
+                              <input
+                              type="radio"
+                              id="notNeeded"
+                              name="food_token"
+                              value=0
+                              checked
+                            />
+                            <label for="true">Not Needed</label><br />
+                            </div>
+                            <div class="form-item ticket-cost-box">
+                                <div class="form-label cost">Ticket cost</div>
+                                <div class="ticket-cost cost">LKR <span class="tickect-amount">0.00</span></div>
+                            </div>
+                          </div>
+                          <div class="form-item">
+                            <button type="submit" class="btn btn-ticket-submit">Add to order</button>
+                          </div>
+                        </form>
+                      </div>
+                      <div>
+                        <button class="btn btn-cancel-form">Cancel</button>
+                    </div>
+                    </div>
+                    <div class="purchase">
+                      <div class="preview">
+                        <!-- Order & total cost will be display here -->
+                        <div class="overall-order">
+                            <p>Selected Tickets</p>
+                            <div class="selected-ticket-list">
+            
+                            </div>
+            
+                        </div>
+                        <div class="overall-cost">
+                            <div> <strong>Total cost: </strong> 
+                                <div class="total-ticket-amount">
+                                     LKR 
+                                     <span class="total-ticket-amount-numeric">0.00
+            
+                                     </span>
+                                </div>     
+                            </div>
+                        </div>
+                            
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="no-ticket">
+                        Not selected
+                    </div>
+                    <!-- Submition -->
+                    <div class="form-submit">
+                      <button  class="btn btn-main-submit">Place Order</button>
+                    </div>
+            
+            
+                
+                    
+                  </div>
+                  <!-- Bought tickets -->
+      <div class="bought-tickets"></div>
+    </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p style="color: black;">You have Successfully bought the tickets.</p>
+        </div>
+      
+      </div>
+            
+            </div>
+            <div class="additional-content">
+                <div class="slider">
+                    
+            
+            
+            
+            
+            
+            
+
+                </div>
+            </div>
+                <script src="./tickets.css"></script>
+
+
+
+        </fieldset>
+        
+        <div class="icons">
+            <i><img src="Images/twitter.png" width="25px"></i>
+            <i><img src="Images/whatsapp.png" width="25px"></i>
+            <i><img src="Images/instagram.png" width="25px"></i>
+            <i><img src="Images/facebook.png" width="25px"></i>
+        </div>
+        </div>
+        </div>
+
+        <script src="main.js"></script>
+    </body>
+</html>
